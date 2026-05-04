@@ -279,3 +279,22 @@ footer {
     .nav-links { display: none; } /* Simplified for mobile */
     h1 { font-size: 3rem; }
 }
+/* Profile Image Customization */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; /* Makes the PNG a circle */
+    object-fit: cover;
+    border: 3px solid var(--accent); /* Teal border */
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--surface); /* Gives a background if the PNG is transparent */
+    box-shadow: 0 0 25px rgba(78, 205, 196, 0.3); /* Teal glow effect */
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
