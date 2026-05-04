@@ -9,13 +9,16 @@
 </head>
 <body class="fade-in">
     <nav class="navbar">
-        <div class="logo">DD</div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="experience.html">Experience & Research</a>
-            <a href="mailto:dhiraj.dhungana.31@gmail.com">Contact</a>
-        </div>
-    </nav>
+    <!-- Clickable Logo to go home -->
+    <a href="index.html" class="logo" style="text-decoration: none;">Dhiraj</a>
+    
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience & Research</a>
+        <!-- This link now jumps down to the contact section -->
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
     <header class="hero">
         <div class="container animate-up">
@@ -26,10 +29,10 @@
                 <span>📍 Urlabari, Morang</span>
                 <span>NHPC Reg: A-6038 Jan PH</span>
             </div>
-            <div class="hero-actions">
-                <a href="experience.html" class="btn">View Experience</a>
-                <a href="mailto:dhiraj.dhungana.31@gmail.com" class="btn secondary">Hire Me</a>
-            </div>
+           <div class="hero-actions">
+    <a href="experience.html" class="btn">View Experience</a>
+    <a href="#contact" class="btn secondary">Hire Me</a>
+</div>
         </div>
     </header>
 
@@ -43,5 +46,31 @@
             <div class="skill-item">Translation/Transcription</div>
         </div>
     </section>
+    <section id="contact" class="section alt-bg animate-up">
+    <div class="container" style="text-align: center;">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid" style="display: flex; justify-content: center; gap: 3rem; margin-top: 2rem;">
+            
+            <!-- Email link -->
+            <a href="mailto:dhiraj.dhungana.31@gmail.com" class="contact-item" style="text-decoration: none; color: inherit;">
+                <div style="font-size: 2rem; color: var(--accent);">✉</div>
+                <p>Email</p>
+            </a>
+
+            <!-- Phone link (will prompt to call on mobile) -->
+            <a href="tel:+9779862185695" class="contact-item" style="text-decoration: none; color: inherit;">
+                <div style="font-size: 2rem; color: var(--accent);">📞</div>
+                <p>+977 9862185695</p>
+            </a>
+
+            <!-- LinkedIn link using your name instead of the URL -->
+            <a href="https://www.linkedin.com/in/dhiraj-dhungana-653662191/" target="_blank" class="contact-item" style="text-decoration: none; color: inherit;">
+                <div style="font-size: 2rem; color: var(--accent);">🔗</div>
+                <p>Dhiraj Dhungana</p>
+            </a>
+
+        </div>
+    </div>
+</section>
 </body>
 </html>
