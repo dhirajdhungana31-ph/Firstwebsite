@@ -179,7 +179,7 @@ body:has(button:hover) .cursor-follower {
   font-weight: 600;
   letter-spacing: 0.05em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,0.03);
+  -webkit-text-stroke: 1px rgba(255,255,255,0.2);
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
