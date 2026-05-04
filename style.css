@@ -1,103 +1,41 @@
-/* ============================================
-   DHIRAJ WORLD — Coming Soon Style
-   Simple, fun, animated
-   ============================================ */
-
-:root {
-  /* We use the nice teal accent from your previous design */
-  --teal: #4ECDC4;
-  --dark-bg: #080B0F; /* Your deep navy background */
-  --text: #E8EDF3;
+/* Animation: Fade in entire page on load */
+.fade-in {
+    animation: fadeInPage 0.8s ease-in-out;
 }
 
-/* ============ RESET ============ */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-body {
-  background-color: var(--dark-bg);
-  color: var(--text);
-  /* Uses standard system fonts that always work without extra loading */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  height: 100vh;
-  display: grid;
-  place-items: center; /* Centers everything on the screen */
-  overflow: hidden; /* Prevents scrollbars */
-  padding: 20px;
+/* Animation: Slide up elements */
+.animate-up {
+    animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ============ LAYOUT ============ */
-.main-container {
-  text-align: center;
-  position: relative;
-  /* Key animation: makes the whole message float up and down */
-  animation: floating 6s ease-in-out infinite;
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 
-/* ============ TEXT STYLES ============ */
-
-.fun-text {
-  font-size: clamp(2.5rem, 8vw, 6rem); /* Responsive text size */
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 2rem;
-  letter-spacing: -0.03em;
-  /* Multi-layered glow effect */
-  text-shadow: 0 0 10px rgba(78,205,196,0.3),
-               0 0 20px rgba(78,205,196,0.2),
-               0 0 30px rgba(78,205,196,0.1);
+/* Timeline specific animation */
+.timeline-item {
+    transition: transform 0.3s ease;
 }
 
-.dhiraj-span {
-  color: var(--teal);
-  /* Extra subtle pulse animation on the name */
-  animation: textPulse 4s ease-in-out infinite alternate;
+.timeline-item:hover {
+    transform: translateX(10px);
+    border-left: 2px solid var(--accent);
 }
 
-.coming-soon {
-  font-size: clamp(1rem, 3vw, 1.8rem);
-  font-weight: 300;
-  color: rgba(232, 237, 243, 0.7); /* Slightly dimmed text */
-  margin-bottom: 3rem;
-  font-style: italic;
-  letter-spacing: 0.05em;
-}
-
-/* ============ DECORATION ============ */
-.accent-line {
-  width: 150px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, var(--teal), transparent);
-  margin: 0 auto;
-  border-radius: 2px;
-  opacity: 0.5;
-  /* Pulses the visibility of the line */
-  animation: linePulse 3s ease-in-out infinite;
-}
-
-/* ============ ANIMATIONS ============ */
-
-/* Floats the whole message up and down */
-@keyframes floating {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-25px); }
-}
-
-/* Makes the name subtly glow brighter and softer */
-@keyframes textPulse {
-  0%, 100% { 
-    text-shadow: 0 0 10px rgba(78,205,196,0.5);
-  }
-  50% { 
-    text-shadow: 0 0 25px rgba(78,205,196,0.9);
-  }
-}
-
-/* Makes the accent line pulse */
-@keyframes linePulse {
-  0%, 100% { opacity: 0.2; transform: scaleX(0.8); }
-  50% { opacity: 0.7; transform: scaleX(1); }
+/* Button fun hover */
+.btn:hover {
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+    transform: scale(1.05);
 }
