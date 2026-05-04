@@ -301,7 +301,7 @@ footer {
     /* 50% centers it horizontally. 
        Adjust the % value (e.g., 20% or 30%) to shift the image down 
        until only the nose and below are visible. */
-    object-position: 60% -5%; 
+    object-position: 70% -10%; 
 }
 
 .profile-img:hover {
